@@ -10,8 +10,6 @@ const MyUserController = {
       const existingUser = await User.findOne({ auth0Id });
 
       if (existingUser) {
-        // res.status(200).json(existingUser.toObject());
-        // return; // If user exists, return it immediately and avoid saving a new user
         res.status(200).send();
         return;
       }
